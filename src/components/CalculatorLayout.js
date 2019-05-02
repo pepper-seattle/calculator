@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Display from './Display';
+import Keypad from './Keypad';
 
 const styles = {
   root: {
@@ -9,6 +10,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    width: 300,
   },
 };
 
@@ -18,7 +20,7 @@ export const CalculatorLayout = () => {
       <h1>CALCULATOR</h1>
       <Display />
       {/* FunctionKeys Component */}
-      {/* Keypad Component */}
+      <Keypad />
     </div>
   )
 };
