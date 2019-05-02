@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 const styles = {
   root: {
-    background: '#d3d3d3',
+    backgroundColor: '#d3d3d3',
     border: '1px black solid',
     color: '#000',
     cursor: 'pointer',
     display: 'flex',
+    fontSize: 24,
     justifyContent: 'center',
     alignItems: 'center',
     width: 75,

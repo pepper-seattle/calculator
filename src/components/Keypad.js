@@ -16,19 +16,19 @@ export const Keypad = () => {
   return(
     <div style={styles.root}>
     <div style={styles.row}>
-      <Key keyValue={'7'} />
-      <Key keyValue={'8'} />
-      <Key keyValue={'9'} />
+      <Key keyValue='7' />
+      <Key keyValue='8' />
+      <Key keyValue='9' />
     </div>
       <div style={styles.row}>
-        <Key keyValue={'4'} />
-        <Key keyValue={'5'} />
-        <Key keyValue={'6'} />
+        <Key keyValue='4' />
+        <Key keyValue='5' />
+        <Key keyValue='6' />
       </div>
       <div style={styles.row}>
-        <Key keyValue={'1'} />
-        <Key keyValue={'2'} />
-        <Key keyValue={'3'} />
+        <Key keyValue='1' />
+        <Key keyValue='2' />
+        <Key keyValue='3' />
       </div>
     </div>
   )
