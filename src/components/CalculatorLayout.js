@@ -1,33 +1,33 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Display from './Display';
 import FunctionKeys from './FunctionKeys';
 import Keypad from './Keypad';
 
-const styles = {
-  root: {
-    color: '#565656',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 300,
-  },
-  pad: {
-    display: 'flex',
-  },
-};
+const Div = styled.div`
+  color: #565656;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300;
+`;
+
+const Pad = styled.div`
+  display: flex;
+`;
 
 export const CalculatorLayout = () => {
   return(
-    <div style={styles.root}>
+    <Div>
       <h1>CALCULATOR</h1>
       <Display />
-      <div style={styles.pad}>
+      <Pad>
         <Keypad />
         <FunctionKeys />
-      </div>
-    </div>
+      </Pad>
+    </Div>
   )
 };
 

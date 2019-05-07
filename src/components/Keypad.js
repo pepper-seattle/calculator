@@ -1,36 +1,36 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import Key from './Key';
 
-const styles = {
-  root: {
-    background: '#000',
-    width: '100%',
-  },
-  row: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-};
+const Div = styled.div`
+  background: #000;
+  width: 100%
+`;
+
+const Row = styled.div`
+  display: flex;
+`;
 
 export const Keypad = () => {
   return(
-    <div style={styles.root}>
-    <div style={styles.row}>
+    <Div>
+    <Row>
       <Key keyValue='7' />
       <Key keyValue='8' />
       <Key keyValue='9' />
-    </div>
-      <div style={styles.row}>
+    </Row>
+      <Row>
         <Key keyValue='4' />
         <Key keyValue='5' />
         <Key keyValue='6' />
-      </div>
-      <div style={styles.row}>
+      </Row>
+      <Row>
         <Key keyValue='1' />
         <Key keyValue='2' />
         <Key keyValue='3' />
-      </div>
-    </div>
+      </Row>
+    </Div>
   )
 };
 

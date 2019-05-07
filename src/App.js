@@ -1,20 +1,18 @@
 import React from 'react';
-import './App.css';
+import styled from 'styled-components';
 
 import CalculatorLayout from './components/CalculatorLayout';
 
-const styles = {
-  root: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
-};
+const Div = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 function App() {
   return (
-    <div style={styles.root}>
+    <Div>
       <CalculatorLayout />
-    </div>
+    </Div>
   );
 }
 

@@ -1,21 +1,20 @@
 import React from 'react';
 import Key from './Key';
+import styled from 'styled-components';
 
-const styles = {
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-};
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const FunctionKeys = () => {
   return(
-    <div style={styles.root}>
+    <Div>
       <Key keyValue='+' />
       <Key keyValue='-' />
       <Key keyValue='x' />
       <Key keyValue='%' />
-    </div>
+    </Div>
   )
 };
 
