@@ -15,11 +15,11 @@ const Row = styled.div`
 export const Keypad = () => {
   return(
     <Div>
-    <Row>
-      <Key keyValue='7' />
-      <Key keyValue='8' />
-      <Key keyValue='9' />
-    </Row>
+      <Row>
+        <Key keyValue='7' />
+        <Key keyValue='8' />
+        <Key keyValue='9' />
+      </Row>
       <Row>
         <Key keyValue='4' />
         <Key keyValue='5' />
@@ -30,6 +30,7 @@ export const Keypad = () => {
         <Key keyValue='2' />
         <Key keyValue='3' />
       </Row>
+      <Key height={75} width={225} keyValue={0} />
     </Div>
   )
 };

@@ -11,17 +11,18 @@ const Button = styled.button`
   font-size: 24px;
   justify-content: center;
   align-items: center;
-  width: ${props => props.size || 75}px;
-  height: ${props => props.size || 75}px;
+  width: ${props => props.width || 75}px;
+  height: ${props => props.height || 75}px;
 `;
 
-export const Key = ({keyValue, size}) => {
-  return <Button size={size}>{keyValue}</Button>
+export const Key = ({keyValue, height, width}) => {
+  return <Button height={height} width={width}>{keyValue}</Button>
 };
 
 Key.propType = {
   keyValue: PropTypes.string,
-  size: PropTypes.number,
+  height: PropTypes.number,
+  width: PropTypes.number,
 };
 
 export default Key;
