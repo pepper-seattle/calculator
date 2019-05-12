@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+
 const Button = styled.button`
   background-color: #d3d3d3;
   border: 1px black solid;
@@ -15,13 +16,23 @@ const Button = styled.button`
   height: ${props => props.height || 75}px;
 `;
 
-export const Key = ({keyValue, height, width}) => {
-  return <Button height={height} width={width}>{keyValue}</Button>
+export const Key = ({keyValue, height, onClick, width}) => {
+
+  return (
+    <Button 
+      height={height} 
+      width={width} 
+      onClick={onClick}
+    >
+        {keyValue}
+    </Button>
+  )
 };
 
 Key.propType = {
-  keyValue: PropTypes.string,
+  keyValue: PropTypes.number,
   height: PropTypes.number,
+  onClick: PropTypes.func,
   width: PropTypes.number,
 };
 

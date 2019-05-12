@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Display from './Display';
+import DisplayContainer from './DisplayContainer';
 import FunctionKeys from './FunctionKeys';
 import Keypad from './Keypad';
 
-const Div = styled.div`
+const Wrapper = styled.div`
   color: #565656;
   display: flex;
   flex-direction: column;
@@ -20,14 +20,14 @@ const Pad = styled.div`
 
 export const CalculatorLayout = () => {
   return(
-    <Div>
+    <Wrapper>
       <h1>CALCULATOR</h1>
-      <Display />
+      <DisplayContainer />
       <Pad>
         <Keypad />
         <FunctionKeys />
       </Pad>
-    </Div>
+    </Wrapper>
   )
 };
 

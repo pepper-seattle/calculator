@@ -3,10 +3,10 @@ import {
   SET_MATH_SYMBOL,
 } from './constants';
 
-export const setDisplayValue = ({newValue}) => {
+export const setDisplayValue = (displayValue) => {
   return {
     type: SET_DISPLAY_VALUE, 
-    payload: {newValue},  
+    payload: {displayValue},  
   };
 }
 

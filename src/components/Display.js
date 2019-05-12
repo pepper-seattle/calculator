@@ -20,17 +20,12 @@ const Span = styled.span`
   width: 100%;
 `;
 
-export const Display = props => {
-  const {displayValue} = props;
+export const Display = ({displayValue}) => {
   return(
     <Div>
       <Span>{displayValue}</Span>
     </Div>
   )
-};
-
-Display.defaultProps = {
-  displayValue: 0,
 };
 
 Display.propTypes = {
