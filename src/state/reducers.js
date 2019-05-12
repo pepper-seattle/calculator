@@ -1,12 +1,8 @@
 import {SET_DISPLAY_VALUE, SET_MATH_SYMBOL} from './constants';
 
 export const DEFAULT_STATE = {
-  display: {
-    displayValue: 0,
-  },
-  math: {
-    activeSymbol: '',
-  },
+  displayValue: 0,
+  activeSymbol: '',
 }
 
 export function reducer(state = DEFAULT_STATE, action) {
@@ -14,7 +10,7 @@ export function reducer(state = DEFAULT_STATE, action) {
     case SET_DISPLAY_VALUE:
         return {
           ...state,
-          displayValue: action.payload.newValue,
+          displayValue: action.payload.displayValue,
         };
 
     case SET_MATH_SYMBOL:
@@ -26,4 +22,4 @@ export function reducer(state = DEFAULT_STATE, action) {
     default: 
       return state;
   }
-}
+};

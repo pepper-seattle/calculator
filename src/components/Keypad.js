@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Key from './Key';
+import KeyContainer from './KeyContainer';
 
 const Div = styled.div`
   background: #000;
@@ -16,21 +16,21 @@ export const Keypad = () => {
   return(
     <Div>
       <Row>
-        <Key keyValue='7' />
-        <Key keyValue='8' />
-        <Key keyValue='9' />
+        <KeyContainer keyValue={7} />
+        <KeyContainer keyValue={8} />
+        <KeyContainer keyValue={9} />
       </Row>
       <Row>
-        <Key keyValue='4' />
-        <Key keyValue='5' />
-        <Key keyValue='6' />
+        <KeyContainer keyValue={4} />
+        <KeyContainer keyValue={5} />
+        <KeyContainer keyValue={6} />
       </Row>
       <Row>
-        <Key keyValue='1' />
-        <Key keyValue='2' />
-        <Key keyValue='3' />
+        <KeyContainer keyValue={1} />
+        <KeyContainer keyValue={2} />
+        <KeyContainer keyValue={3} />
       </Row>
-      <Key height={75} width={225} keyValue={0} />
+      <KeyContainer height={75} width={225} keyValue={0} />
     </Div>
   )
 };
