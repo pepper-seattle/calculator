@@ -1,20 +1,20 @@
 import React from 'react';
-import Key from './Key';
+import KeyContainer from './KeyContainer';
 import styled from 'styled-components';
 
-const Div = styled.div`
+const FuncWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
 export const FunctionKeys = () => {
   return(
-    <Div>
-      <Key keyValue='+' />
-      <Key keyValue='-' />
-      <Key keyValue='x' />
-      <Key keyValue='%' />
-    </Div>
+    <FuncWrapper>
+      <KeyContainer keyValue='+' />
+      <KeyContainer keyValue='-' />
+      <KeyContainer keyValue='x' />
+      <KeyContainer keyValue='%' />
+    </FuncWrapper>
   )
 };
 
