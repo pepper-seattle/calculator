@@ -1,6 +1,24 @@
-// function mathResult() {
-//   const value1 = value1;
-//   const value2 = value2;
-//   const symbol = activeSymbol;
-//   return eval(value1 symbol value2);
-// }
+import {setDisplayValue} from '../state/reducers';
+
+const calculation = (num1, num2, mathFunc) => {
+  let result;
+	switch (mathFunc) {
+    case '+':
+      return result = num1 + num2;
+      break;
+    case '-':
+      return result = num1 - num2;
+      break;
+    case 'x':
+      return result = num1 * num2;
+      break;
+    case '%':
+      return result = num1 / num2;
+      break;
+    default:
+      console.log('nope');
+      break;
+  }
+
+  setDisplayValue(result);
+};
