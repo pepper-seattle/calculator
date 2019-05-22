@@ -1,4 +1,3 @@
 export const SET_DISPLAY_VALUE = 'SET_DISPLAY_VALUE';
-export const SET_FIRST_VALUE = 'SET_FIRST_VALUE';
-export const SET_SECOND_VALUE = 'SET_SECOND_VALUE';
+export const SET_PREV_NUM = 'SET_PREV_NUM';
 export const SET_MATH_SYMBOL = 'SET_MATH_SYMBOL';

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 
 const Button = styled.button`
-  background-color: #d3d3d3;
+  background-color: ${props => props.backgroundColor || '#d3d3d3'};
   border: 1px black solid;
   color: #000;
   cursor: pointer;
@@ -16,10 +16,11 @@ const Button = styled.button`
   height: ${props => props.height || 75}px;
 `;
 
-export const Key = ({keyValue, height, onClick, width}) => {
+export const Key = ({backgroundColor, keyValue, height, onClick, width}) => {
 
   return (
     <Button 
+      backgroundColor={backgroundColor}
       height={height} 
       width={width} 
       onClick={onClick}
@@ -30,7 +31,7 @@ export const Key = ({keyValue, height, onClick, width}) => {
 };
 
 Key.propType = {
-  keyValue: PropTypes.number,
+  keyValue: PropTypes.any,
   height: PropTypes.number,
   onClick: PropTypes.func,
   width: PropTypes.number,

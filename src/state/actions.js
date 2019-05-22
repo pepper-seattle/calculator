@@ -1,7 +1,6 @@
 import {
   SET_DISPLAY_VALUE,
-  SET_FIRST_VALUE,
-  SET_SECOND_VALUE,
+  SET_PREV_NUM,
   SET_MATH_SYMBOL
 } from './constants';
 
@@ -10,25 +9,18 @@ export const setDisplayValue = (displayValue) => {
     type: SET_DISPLAY_VALUE, 
     payload: {displayValue},  
   };
-}
+};
 
-export const setFirstValue = (firstValue) => {
+export const setPrevNum = (prevNum) => {
   return {
-    type: SET_FIRST_VALUE, 
-    payload: {firstValue},  
+    type: SET_PREV_NUM, 
+    payload: {prevNum},  
   };
-}
-
-export const setSecondValue = (secondValue) => {
-  return {
-    type: SET_SECOND_VALUE, 
-    payload: {secondValue},  
-  };
-}
+};
 
 export const setMathSymbol = (symbol) => {
   return {
     type: SET_MATH_SYMBOL,
     payload: {symbol},
   };
-}
+};
