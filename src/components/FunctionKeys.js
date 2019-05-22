@@ -14,6 +14,7 @@ export const FunctionKeys = () => {
       <KeyContainer keyValue='-' />
       <KeyContainer keyValue='x' />
       <KeyContainer keyValue='%' />
+      <KeyContainer backgroundColor='#5d5dff' keyValue='=' />
     </FuncWrapper>
   )
 };
