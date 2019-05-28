@@ -1,4 +1,5 @@
 import {
+  CLEAR_ALL,
   SET_DISPLAY_VALUE,
   SET_PREV_NUM,
   SET_MATH_SYMBOL
@@ -12,25 +13,33 @@ export const DEFAULT_STATE = {
 
 export function reducer(state = DEFAULT_STATE, action) {
   switch (action.type) {
+    case CLEAR_ALL: 
+      return {
+        ...state,
+        displayValue: 0,
+        prevNum: 0,
+        mathSymbol: undefined,
+      };
+
     case SET_DISPLAY_VALUE:
-        return {
-          ...state,
-          displayValue: action.payload.displayValue,
-        };
+      return {
+        ...state,
+        displayValue: action.payload.displayValue,
+      };
 
     case SET_PREV_NUM:
-        return {
-          ...state,
-          prevNum: action.payload.prevNum,
-        };
+      return {
+        ...state,
+        prevNum: action.payload.prevNum,
+      };
 
     case SET_MATH_SYMBOL:
-        return {
-          ...state,
-          mathSymbol: action.payload.symbol,
-        };
+      return {
+        ...state,
+        mathSymbol: action.payload.symbol,
+      };
   
     default: 
       return state;
-  }
+  };
 };

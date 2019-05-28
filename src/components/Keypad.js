@@ -31,6 +31,7 @@ export const Keypad = () => {
         <KeyContainer keyValue={3} />
       </Row>
       <KeyContainer height={75} width={225} keyValue={0} />
+      <KeyContainer backgroundColor='#ffa500' height={75} width={225} keyValue={'AC'} />
     </Div>
   )
 };

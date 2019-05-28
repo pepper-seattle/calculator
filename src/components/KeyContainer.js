@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {
+  clearAll,
   setDisplayValue, 
   setPrevNum, 
   setMathSymbol,
@@ -14,6 +15,7 @@ let displayArray = [];
 
 export const KeyContainer = (props) => {
   const {
+    clearAll,
     mathSymbol,
     prevNum,
     setDisplayValue,
@@ -27,8 +29,9 @@ export const KeyContainer = (props) => {
   };
 
   // Bugs:
-  // Running a proper calculation and then continuously pressing '=' will rerun it 
-  // setPrevNum 
+  // 1. Running a proper calculation and then continuously pressing '=' will rerun it 
+  // 2. Trying to do more than one calculation won't move the last display value
+  // to the prevNum
   const runCalculation = () => {
     let displayValue = parseInt(displayArray.join(''));
     setPrevNum(parseInt(prevNum));
@@ -39,13 +42,18 @@ export const KeyContainer = (props) => {
   const clickHandler = (e) => {
     let keyValue = e.target.innerHTML;
 
+    if(keyValue === 'AC'){
+      clearAll();
+      displayArray = [];
+    }
+
     if(keyValue === '='){
       runCalculation();
     }
 
     // Sets the math operator for the calculation and 
     // clears the saved display value array to make way for the second value
-    if(keyValue !== '=' && isNaN(keyValue)){
+    if(keyValue !== '=' && keyValue !== 'AC' && isNaN(keyValue)){
       setPrevNum(parseInt(displayArray.join('')));
       setMathSymbol(keyValue);
       displayArray = [];
@@ -63,6 +71,7 @@ export const KeyContainer = (props) => {
 };
 
 KeyContainer.propTypes = {
+  clearAll: PropTypes.func,
   displayValue: PropTypes.number,
   prevNum: PropTypes.number,
   setDisplayValue: PropTypes.func,
@@ -78,6 +87,9 @@ const mapStateToProps = ({calculator}) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return{
+    clearAll: () => {
+      dispatch(clearAll());
+    },
     setDisplayValue: (value) => {
       dispatch(setDisplayValue(value));
     },
