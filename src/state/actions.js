@@ -1,8 +1,15 @@
 import {
+  CLEAR_ALL,
   SET_DISPLAY_VALUE,
   SET_PREV_NUM,
   SET_MATH_SYMBOL
 } from './constants';
+
+export const clearAll = () => {
+  return {
+    type: CLEAR_ALL,
+  };
+};
 
 export const setDisplayValue = (displayValue) => {
   return {
