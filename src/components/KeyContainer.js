@@ -30,13 +30,12 @@ export const KeyContainer = (props) => {
 
   // Bugs:
   // 1. Running a proper calculation and then continuously pressing '=' will rerun it 
-  // 2. Trying to do more than one calculation won't move the last display value
-  // to the prevNum
   const runCalculation = () => {
     let displayValue = parseInt(displayArray.join(''));
-    setPrevNum(parseInt(prevNum));
     let result = operators[mathSymbol](prevNum, displayValue);
     setDisplayValue(result);
+    setPrevNum(parseInt(result));
+    displayArray = [];
   };
 
   const clickHandler = (e) => {
@@ -54,7 +53,9 @@ export const KeyContainer = (props) => {
     // Sets the math operator for the calculation and 
     // clears the saved display value array to make way for the second value
     if(keyValue !== '=' && keyValue !== 'AC' && isNaN(keyValue)){
-      setPrevNum(parseInt(displayArray.join('')));
+      if(displayArray.length > 0){
+        setPrevNum(parseInt(displayArray.join('')));
+      }
       setMathSymbol(keyValue);
       displayArray = [];
     }
